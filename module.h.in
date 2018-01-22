@@ -1,0 +1,13 @@
+//  :copyright: (c) 2017-2018 Alex Huszagh.
+//  :license: MIT, see licenses/mit.md for more details.
+/**
+ *  \addtogroup PyCPP
+ *  \brief System library abstraction utilities.
+ */
+
+#pragma once
+
+#include <pycpp/system/errno.h>
+#include <pycpp/system/windows.h>
+#include <pycpp/system/sys/mman.h>
+#include <pycpp/system/sys/stat.h>
