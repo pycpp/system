@@ -6,7 +6,7 @@
  *  \brief Windows API definitions.
  *
  *  \synopsis
- *      #if defined(OS_WINDOWS)
+ *      #if defined(PYCPP_WINDOWS)
  *      #   define ERROR_ELEVATION_REQUIRED implementation-defined
  *      #   define ERROR_SYMLINK_NOT_SUPPORTED implementation-defined
  *      #   define ERROR_MUI_FILE_NOT_FOUND implementation-defined
@@ -26,7 +26,7 @@
 #include <pycpp/preprocessor/os.h>
 #include <pycpp/config.h>
 
-#if defined(OS_WINDOWS)
+#if defined(PYCPP_WINDOWS)
 #   include <winsock2.h>
 #   include <windows.h>
 
@@ -66,7 +66,7 @@
 #   define ERROR_MUI_FILE_NOT_LOADED 15105
 #endif
 
-#endif                  // defined(OS_WINDOWS)
+#endif                  // defined(PYCPP_WINDOWS)
 
 PYCPP_BEGIN_NAMESPACE
 

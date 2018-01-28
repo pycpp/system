@@ -6,7 +6,7 @@
 #include <pycpp/system/windows.h>
 #include <pycpp/system/sys/mman.h>
 
-#if defined(OS_WINDOWS)         // WINDOWS
+#if defined(PYCPP_WINDOWS)      // WINDOWS
 #include <io.h>
 
 // MACROS

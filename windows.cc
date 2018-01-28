@@ -4,7 +4,7 @@
 
 #include <pycpp/system/windows.h>
 
-#if defined(OS_WINDOWS)
+#if defined(PYCPP_WINDOWS)
 #   include <pycpp/system/errno.h>
 #   include <cstdio>
 #endif
@@ -15,7 +15,7 @@ PYCPP_BEGIN_NAMESPACE
 // ---------
 
 
-#if defined(OS_WINDOWS)                     // WINDOWS
+#if defined(PYCPP_WINDOWS)                      // WINDOWS
 
 
 int translate_win32_error(int code) noexcept
@@ -131,18 +131,18 @@ void set_errno_win32() noexcept
     errno = translate_win32_error(GetLastError());
 }
 
-#else                                       // POSIX
+#else                                           // POSIX
 
 
-int translate_win32_error(int code) noexcept     // nullopt
+int translate_win32_error(int code) noexcept    // nullopt
 {
     return code;
 }
 
 
-void set_errno_win32() noexcept                  // nullopt
+void set_errno_win32() noexcept                 // nullopt
 {}
 
-#endif                                      // WINDOWS
+#endif                                          // WINDOWS
 
 PYCPP_END_NAMESPACE

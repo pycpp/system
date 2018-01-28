@@ -37,7 +37,7 @@
 
 #include <pycpp/preprocessor/os.h>
 
-#if !defined(OS_WINDOWS)            // POSIX
+#if !defined(PYCPP_WINDOWS)         // POSIX
 #   include <sys/mman.h>
 #else                               // WINDOWS
 
@@ -157,4 +157,4 @@ munlock(
 )
 noexcept;
 
-#endif                                  // defined(OS_WINDOWS)
+#endif                                  // defined(PYCPP_WINDOWS)
